@@ -1,6 +1,6 @@
 # 🧰 Small Tools Collection
 
-A collection of small web tools you can use directly from your browser.
+A collection of small tools you can use directly from your browser.
 
 ## 🔎 Tools
 
