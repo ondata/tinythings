@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta property="og:title" content="Understand any GitHub project with DeepWiki" />
+  <meta property="og:description" content="Use this handy bookmarklet to open a GitHub repo in DeepWiki and get instant insights." />
+  <meta property="og:image" content="https://i.imgur.com/4Tq3eHr.gif" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Understand any GitHub project with DeepWiki" />
+  <meta name="twitter:description" content="Use this handy bookmarklet to explore any GitHub project with DeepWiki." />
+  <meta name="twitter:image" content="https://i.imgur.com/4Tq3eHr.gif" />
+  <title>Want to understand more about a GitHub project??!!</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.5;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .bookmarklet {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #0366d6;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin: 15px 0;
+      cursor: move;
+    }
+    .bookmarklet:hover {
+      background-color: #0255b3;
+    }
+    .caption {
+      font-style: italic;
+      margin-top: 10px;
+    }
+    hr {
+      margin: 30px 0;
+      border: none;
+      border-top: 1px solid #e1e4e8;
+    }
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Want to understand more about a GitHub project??!!</h1>
+
+  <p>If you're browsing a GitHub project and want to better understand how it works, you can use this button:</p>
+
+  <a class="bookmarklet" href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('Non sei su una pagina valida di GitHub.');}})();">View in DeepWiki</a>
+
+  <p class="caption">Drag the button above to your bookmarks bar and use it when you're on a project page. The DeepWiki page for that project will open.</p>
+
+  <div style="margin: 20px 0;">
+    <p>This short GIF shows how DeepWiki works</p>
+    <img src="https://i.imgur.com/4Tq3eHr.gif" alt="DeepWiki Demo GIF" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+  <p>This is an idea by <a href="https://ondata.substack.com/" target="_blank">onData</a></p>
+  </div>
+  <hr>
+
+
+
+  <p><a href="https://deepwiki.com/" target="_blank">DeepWiki</a> is a project powered by <a href="https://devin.ai/" target="_blank">Devin</a>, which generates a wiki from an LLM engine that allows you to better understand a project and ask in-depth questions.</p>
+</body>
+</html>
