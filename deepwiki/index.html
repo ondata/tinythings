@@ -63,7 +63,7 @@
 
   <p>If you're browsing a GitHub project and want to better understand how it works, you can use this button:</p>
 
-  <a class="bookmarklet" href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('Non sei su una pagina valida di GitHub.');}})();">View in DeepWiki</a>
+  <a class="bookmarklet" href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('You are not on a valid GitHub page.');}})();">View in DeepWiki</a>
 
   <p class="caption">Drag the button above to your bookmarks bar and use it when you're on a project page. The DeepWiki page for that project will open.</p>
 
@@ -75,8 +75,19 @@
   </div>
   <hr>
 
-
-
   <p><a href="https://deepwiki.com/" target="_blank">DeepWiki</a> is a project powered by <a href="https://devin.ai/" target="_blank">Devin</a>, which generates a wiki from an LLM engine that allows you to better understand a project and ask in-depth questions.</p>
+
+  <hr>
+  <h2>Bookmarklet Code</h2>
+  <pre style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto;">
+javascript:(function(){
+    const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);
+    if (match) {
+        const newUrl = 'https://deepwiki.com/' + match[1];
+        window.open(newUrl, '_blank');
+    } else {
+        alert('You are not on a valid GitHub page.');
+    }
+})();</pre>
 </body>
 </html>
