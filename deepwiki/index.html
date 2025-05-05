@@ -3,12 +3,12 @@
 <head>
   <meta property="og:title" content="Understand any GitHub project with DeepWiki" />
   <meta property="og:description" content="Use this handy bookmarklet to open a GitHub repo in DeepWiki and get instant insights." />
-  <meta property="og:image" content="https://i.imgur.com/4Tq3eHr.gif" />
+  <meta property="og:image" content="deepwiki.gif" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Understand any GitHub project with DeepWiki" />
   <meta name="twitter:description" content="Use this handy bookmarklet to explore any GitHub project with DeepWiki." />
-  <meta name="twitter:image" content="https://i.imgur.com/4Tq3eHr.gif" />
+  <meta name="twitter:image" content="deepwiki.gif" />
   <title>Want to understand more about a GitHub project??!!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
@@ -19,11 +19,21 @@
     }
     .bookmarklet {
       display: inline-block;
-      padding: 10px 15px;
+      padding: 12px 20px;
+      background-color: #0366d6;
+      color: white;
       text-decoration: none;
       font-weight: bold;
       margin: 15px 0;
       cursor: move;
+      border-radius: 6px;
+      border: 1px solid #0356c6;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+    }
+    .bookmarklet:hover {
+      background-color: #0356c6;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     pre {
       overflow-x: auto;
