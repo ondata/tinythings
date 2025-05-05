@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html data-theme="light">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:title" content="Understand any GitHub project with DeepWiki" />
   <meta property="og:description" content="Use this handy bookmarklet to open a GitHub repo in DeepWiki and get instant insights." />
   <meta property="og:image" content="deepwiki.gif" />
@@ -12,11 +13,6 @@
   <title>Want to understand more about a GitHub project??!!</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
-    body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
     .bookmarklet {
       cursor: move;
     }
@@ -29,27 +25,30 @@
 </head>
 <body>
   <main class="container">
-    <h1>Want to understand more about a GitHub project??!!</h1>
+    <article>
+      <header>
+        <h1>Want to understand more about a GitHub project??!!</h1>
+      </header>
 
-    <p>If you're browsing a GitHub project and want to better understand how it works, you can use this button:</p>
+      <p>If you're browsing a GitHub project and want to better understand how it works, you can use this button:</p>
 
-    <a class="bookmarklet outline" role="button" href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('You are not on a valid GitHub page.');}})();">View in DeepWiki</a>
+      <a class="bookmarklet outline" role="button" href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('You are not on a valid GitHub page.');}})();">View in DeepWiki</a>
 
-    <p class="caption">Drag the button above to your bookmarks bar and use it when you're on a project page. The DeepWiki page for that project will open.</p>
+      <p class="caption">Drag the button above to your bookmarks bar and use it when you're on a project page. The DeepWiki page for that project will open.</p>
 
-    <div style="margin: 20px 0;">
-      <p>This short GIF shows how DeepWiki works</p>
-      <img src="deepwiki.gif" alt="DeepWiki Demo GIF" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <div style="margin: 20px 0;">
+        <p>This short GIF shows how DeepWiki works</p>
+        <img src="deepwiki.gif" alt="DeepWiki Demo GIF" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 
-      <p>This is an idea by <a href="https://ondata.substack.com/" target="_blank">onData</a></p>
-    </div>
-    <hr>
+        <p>This is an idea by <a href="https://ondata.substack.com/" target="_blank">onData</a></p>
+      </div>
+      <hr>
 
-    <p><a href="https://deepwiki.com/" target="_blank">DeepWiki</a> is a project powered by <a href="https://devin.ai/" target="_blank">Devin</a>, which generates a wiki from an LLM engine that allows you to better understand a project and ask in-depth questions.</p>
+      <p><a href="https://deepwiki.com/" target="_blank">DeepWiki</a> is a project powered by <a href="https://devin.ai/" target="_blank">Devin</a>, which generates a wiki from an LLM engine that allows you to better understand a project and ask in-depth questions.</p>
 
-    <hr>
-    <h2>Bookmarklet Code</h2>
-    <pre style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto;">
+      <hr>
+      <h2>Bookmarklet Code</h2>
+      <pre style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; overflow-x: auto;">
 javascript:(function(){
     const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);
     if (match) {
@@ -59,6 +58,7 @@ javascript:(function(){
         alert('You are not on a valid GitHub page.');
     }
 })();</pre>
+    </article>
   </main>
 </body>
 </html>
