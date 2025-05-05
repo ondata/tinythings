@@ -18,36 +18,57 @@
     .bookmarklet {
       cursor: move
     }
+
+    main.container {
+      padding: 1rem
+    }
+
+    section {
+      margin-bottom: 2rem
+    }
+
+    hgroup {
+      margin-bottom: 1rem
+    }
+
+    hgroup h2 {
+      --typography-spacing-vertical: 0.5rem
+    }
+
+    article {
+      margin: 0
+    }
+
+    figure {
+      margin: 1.5rem 0
+    }
   </style>
 </head>
 
 <body>
   <main class="container">
+    <hgroup>
+      <h1>Want to understand more about a GitHub project??!!</h1>
+      <h2>Use this button to explore any GitHub repository with DeepWiki</h2>
+    </hgroup>
+
+    <a class="bookmarklet outline" role="button"
+      href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('You are not on a valid GitHub page.');}})();">View
+      in DeepWiki</a>
+    <p><small>Drag the button above to your bookmarks bar and use it when you're on a project page.</small></p>
+
+    <figure>
+      <img src="deepwiki.gif" alt="DeepWiki Demo GIF" style="max-width:100%;border-radius:6px">
+      <figcaption>This short GIF shows how DeepWiki works</figcaption>
+    </figure>
+
+    <p><a href="https://deepwiki.com/" target="_blank">DeepWiki</a> is a project powered by <a href="https://devin.ai/"
+        target="_blank">Devin</a>, which generates a wiki from an LLM engine that allows you
+      to better understand a project and ask in-depth questions.</p>
+
     <section>
-
-
-      <article>
-        <h1>Want to understand more about a GitHub project??!!</h1>
-        <h3>Use this button to explore any GitHub repository with DeepWiki</h3>
-        <div class="grid">
-          <div>
-            <a class="bookmarklet outline" role="button"
-              href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('You are not on a valid GitHub page.');}})();">View
-              in DeepWiki</a>
-            <p><small>Drag the button above to your bookmarks bar and use it when you're on a project page.</small></p>
-          </div>
-        </div>
-
-        <figure>
-          <img src="deepwiki.gif" alt="DeepWiki Demo GIF" style="max-width:100%;border-radius:6px">
-          <figcaption>This short GIF shows how DeepWiki works</figcaption>
-        </figure>
-
-        <p><a href="https://deepwiki.com/" target="_blank">DeepWiki</a> is a project powered by <a
-            href="https://devin.ai/" target="_blank">Devin</a>, which generates a wiki from an LLM engine that allows
-          you to better understand a project and ask in-depth questions.</p>
-          <hr>
-          <h3>Bookmarklet Code</h3>
+      <hr>
+      <h3>Bookmarklet Code</h3>
       <pre><code>javascript:(function(){
     const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);
     if (match) {
@@ -57,14 +78,11 @@
         alert('You are not on a valid GitHub page.');
     }
 })();</code></pre>
-<hr>
-<small>This is an idea by <a href="https://ondata.substack.com/" target="_blank">onData</a></small>
-      </article>
-
+      <hr>
+      <small>This is an idea by <a href="https://ondata.substack.com/" target="_blank">onData</a></small>
     </section>
-
-
   </main>
+
 
 </body>
 
