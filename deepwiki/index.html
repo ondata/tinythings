@@ -18,22 +18,7 @@
       padding: 20px;
     }
     .bookmarklet {
-      display: inline-block;
-      padding: 12px 20px;
-      background-color: #0366d6;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 15px 0;
       cursor: move;
-      border-radius: 6px;
-      border: 1px solid #0356c6;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-      transition: all 0.2s ease;
-    }
-    .bookmarklet:hover {
-      background-color: #0356c6;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     pre {
       overflow-x: auto;
@@ -48,7 +33,7 @@
 
     <p>If you're browsing a GitHub project and want to better understand how it works, you can use this button:</p>
 
-    <a class="bookmarklet" href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('You are not on a valid GitHub page.');}})();">View in DeepWiki</a>
+    <a class="bookmarklet outline" role="button" href="javascript:(function(){const match = window.location.href.match(/^https:\/\/github\.com\/([^\/]+\/[^\/]+)/);if (match) {const newUrl = 'https://deepwiki.com/' + match[1];window.open(newUrl, '_blank');} else {alert('You are not on a valid GitHub page.');}})();">View in DeepWiki</a>
 
     <p class="caption">Drag the button above to your bookmarks bar and use it when you're on a project page. The DeepWiki page for that project will open.</p>
 
